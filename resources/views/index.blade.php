@@ -9,5 +9,8 @@
 <body>
     <h1>mybbs</h1>
     <p>{{ $message }}</p>
+    @foreach ($articles as $article)
+    <p>{{$article->content}}</p>
+    @endforeach
 </body>
 </html>

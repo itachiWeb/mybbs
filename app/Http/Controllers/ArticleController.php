@@ -15,7 +15,8 @@ class ArticleController extends Controller
     public function index()
     {
         $message = 'Welcome my BBS';
-        return view('index', ['message' => $message]);
+        $articles = Article::all();
+        return view('index', ['message' => $message, 'articles' => $articles]);
     }
 
     /**
